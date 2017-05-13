@@ -6,16 +6,15 @@ public class MoveEnemy : MonoBehaviour
     public float AGGRESSIVE_RANGE = 15.0f;
 
     float distToPlayer;
-    Transform player;               // Reference to the player's position.
+    Transform player;               
     Transform tree;
-    //playerHealth;                   // Reference to the player's health.
-    //EnemyHealth enemyHealth;        // Reference to this enemy's health.
-    NavMeshAgent nav;               // Reference to the nav mesh agent.
+    //playerHealth;                   
+    //EnemyHealth enemyHealth;       
+    NavMeshAgent nav;               
 
 
     void Awake()
     {
-        // Set up the references.
         player = GameObject.FindGameObjectWithTag("Player").transform;
         tree = GameObject.FindGameObjectWithTag("Tree").transform;
         //playerHealth = player.GetComponent<PlayerHealth>();

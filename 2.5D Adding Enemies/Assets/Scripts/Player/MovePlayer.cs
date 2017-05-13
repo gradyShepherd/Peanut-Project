@@ -5,18 +5,16 @@ public class MovePlayer : MonoBehaviour
     public float speed = 20f;           
 
     Vector3 movement;                   
-          
-    int floorMask;
-
-    Animator anim;
-    Rigidbody playerRigidbody;
+    Animator anim;                      
+    Rigidbody playerRigidbody;         
+    int floorMask;                      
     //float camRayLength = 100f;          
 
     void Awake()
     {
-        playerRigidbody = GetComponent<Rigidbody>();
         floorMask = LayerMask.GetMask("Floor");
         anim = GetComponent<Animator>();
+        playerRigidbody = GetComponent<Rigidbody>();
     }
 
 
