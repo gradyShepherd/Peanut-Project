@@ -36,27 +36,33 @@ public class MovePlayer : MonoBehaviour
 
     void Animating(float h, float v)
     {
-        bool isWalkingVert;
-        bool isWalkingHoriz;
-
+		
         if (!Input.GetButtonDown("Attack Down") && !Input.GetButtonDown("Attack Up") && 
             !Input.GetButtonDown("Attack Left") && !Input.GetButtonDown("Attack Right"))
         {
-            if (v != 0)
+            if (v > 0)
             {
-                isWalkingVert = true;
-                isWalkingHoriz = false;
+				anim.SetBool("isMoveSouth", false);
+				anim.SetBool ("isMoveNorth", true);
             }
-            else if (h != 0)
+            else if (v < 0)
             {
-                isWalkingHoriz = true;
-                isWalkingVert = false;
+				anim.SetBool("isMoveSouth", true);
+				anim.SetBool ("isMoveNorth", false);
             }
-            else
-            {
-                isWalkingVert = false;
-                isWalkingHoriz = false;
-            }
+			else
+			{
+				anim.SetBool ("isMoveSouth", false);
+				anim.SetBool ("isMoveNorth", false);
+			}
+
+			if (h > 0) 
+			{
+			} 
+			else if (h < 0) 
+			{
+				
+			}
         }
     }
 }
